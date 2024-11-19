@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSF Day 12 Workshop</title>
+</head>
+<body>
+    <h1>Your list of <span th:text="${numberImages.size()}"></span> random numbers</h1>
+        <div th:each="image : ${numberImages}">
+                <img th:src="@{${image.relPath}}" alt="image">
+                <!-- Need the ${} to indicate it is a variable -->
+                <!-- @{} only makes it a link -->
+        </div>
+</body>
+</html>
